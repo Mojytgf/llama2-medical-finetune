@@ -60,7 +60,9 @@ Réponse du modèle :
 
     L’ascaridiose est une infection parasitaire causée par le ver rond Ascaris lumbricoides...
 
-📊 Détails d’entraînement
+```
+## 📊 Détails d’entraînement
+```bash
 Élément	Détails
 Modèle de base	aboonaji/llama2finetune-v2
 Jeu de données	aboonaji/wiki_medical_terms_llam2_format
@@ -71,8 +73,9 @@ Nombre d’étapes	100 (version de démonstration)
 
     L’entraînement a été effectué avec le SFTTrainer de TRL, permettant un fine-tuning efficace avec une mémoire GPU limitée.
 
+```
 📈 Résultats et observations
-
+```bash
 ✅ Le modèle a appris à mieux comprendre le vocabulaire médical.
 ⚡ La quantification 4 bits a permis l’exécution sur un GPU limité.
 📉 La perte (loss) a diminué progressivement, signe de convergence.
@@ -83,8 +86,10 @@ Nombre d’étapes	100 (version de démonstration)
 10	2.38
 50	1.92
 100	1.63
-🧰 Technologies utilisées
 
+```
+🧰 Technologies utilisées
+```bash
     🤗 Hugging Face Transformers
 
     🧮 PEFT (LoRA)
