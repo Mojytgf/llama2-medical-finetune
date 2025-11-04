@@ -31,9 +31,8 @@ llama2-medical-finetune/
 
 ## ⚙️ Installation et exécution
 
-### 1️⃣ Cloner le dépôt
-
 ```bash
+1️⃣ Cloner le dépôt
 git clone https://github.com/Mojytgf/llama2-medical-finetune.git
 cd llama2-medical-finetune
 
