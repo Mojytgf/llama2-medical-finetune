@@ -32,7 +32,7 @@ llama2-medical-finetune/
 ## ⚙️ Installation et exécution
 
 ### 1️⃣ Cloner le dépôt
-```bash
+bash
 git clone https://github.com/Mojytgf/llama2-medical-finetune.git
 cd llama2-medical-finetune
 
@@ -60,28 +60,28 @@ L’ascaridiose est une infection parasitaire causée par le ver rond Ascaris lu
 
 📊 Détails d’entraînement
 
-    Modèle de base : aboonaji/llama2finetune-v2
+Modèle de base : aboonaji/llama2finetune-v2
 
-    Jeu de données : aboonaji/wiki_medical_terms_llam2_format
+Jeu de données : aboonaji/wiki_medical_terms_llam2_format
 
-    Méthode : LoRA (Low-Rank Adaptation)
+Méthode : LoRA (Low-Rank Adaptation)
 
-    Précision : Quantification 4 bits (NF4)
+Précision : Quantification 4 bits (NF4)
 
-    Librairies : Transformers, PEFT, TRL
+Librairies : Transformers, PEFT, TRL
 
-    Nombre d’étapes : 100 (version de démonstration)
+ Nombre d’étapes : 100 (version de démonstration)
 
 L’entraînement a été effectué avec le SFTTrainer de trl, permettant un fine-tuning efficace avec une mémoire GPU limitée.
 📈 Résultats et observations
 
-    Le modèle a appris à mieux comprendre le vocabulaire médical.
+Le modèle a appris à mieux comprendre le vocabulaire médical.
 
-    La quantification a permis d’exécuter le fine-tuning sur du matériel limité (GPU Colab).
+La quantification a permis d’exécuter le fine-tuning sur du matériel limité (GPU Colab).
 
-    La perte (loss) a diminué progressivement, signe de convergence.
+La perte (loss) a diminué progressivement, signe de convergence.
 
-    Les réponses générées étaient cohérentes et adaptées au contexte.
+Les réponses générées étaient cohérentes et adaptées au contexte.
 
 Exemple d’évolution de la perte :
 
@@ -91,14 +91,14 @@ Step 100 → Loss: 1.63
 
 🧰 Technologies utilisées
 
-    🤗 Hugging Face Transformers
+🤗 Hugging Face Transformers
 
-    🧮 PEFT (LoRA)
+🧮 PEFT (LoRA)
 
-    ⚡ BitsAndBytes (quantification 4 bits)
+⚡ BitsAndBytes (quantification 4 bits)
 
-    🧠 TRL (Supervised Fine-Tuning)
+🧠 TRL (Supervised Fine-Tuning)
 
-    🧰 Python 3.10
+🧰 Python 3.10
 
-    📊 TensorBoard
+📊 TensorBoard
