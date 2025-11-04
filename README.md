@@ -29,8 +29,70 @@ llama2-medical-finetune/
 └── README.md # Documentation du projet
 ```
 
-⚙️ Installation et exécution
-1️⃣ Cloner le dépôt
+## ⚙️ Installation et exécution
+
+### 1️⃣ Cloner le dépôt
+
+```bash
 git clone https://github.com/Mojytgf/llama2-medical-finetune.git
 cd llama2-medical-finetune
+
+2️⃣ Installer les dépendances
+
+pip install -r requirements.txt
+
+3️⃣ Lancer le fine-tuning
+
+python src/train.py
+
+4️⃣ Tester le modèle (inférence)
+
+python src/inference.py
+
+💬 Exemple d’utilisation
+
+Prompt :
+
+Please tell me about Ascariasis
+
+Réponse du modèle :
+
+    L’ascaridiose est une infection parasitaire causée par le ver rond Ascaris lumbricoides...
+
+📊 Détails d’entraînement
+Élément	Détails
+Modèle de base	aboonaji/llama2finetune-v2
+Jeu de données	aboonaji/wiki_medical_terms_llam2_format
+Méthode	LoRA (Low-Rank Adaptation)
+Précision	Quantification 4 bits (NF4)
+Librairies	Transformers, PEFT, TRL
+Nombre d’étapes	100 (version de démonstration)
+
+    L’entraînement a été effectué avec le SFTTrainer de TRL, permettant un fine-tuning efficace avec une mémoire GPU limitée.
+
+📈 Résultats et observations
+
+✅ Le modèle a appris à mieux comprendre le vocabulaire médical.
+⚡ La quantification 4 bits a permis l’exécution sur un GPU limité.
+📉 La perte (loss) a diminué progressivement, signe de convergence.
+💬 Les réponses générées étaient cohérentes et adaptées au contexte.
+
+Évolution de la perte pendant l’entraînement :
+Étape	Perte (Loss)
+10	2.38
+50	1.92
+100	1.63
+🧰 Technologies utilisées
+
+    🤗 Hugging Face Transformers
+
+    🧮 PEFT (LoRA)
+
+    ⚡ BitsAndBytes (quantification 4 bits)
+
+    🧠 TRL (Supervised Fine-Tuning)
+
+    🧰 Python 3.10
+
+    📊 TensorBoard
 
