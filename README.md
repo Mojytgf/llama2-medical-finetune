@@ -60,17 +60,19 @@ L’ascaridiose est une infection parasitaire causée par le ver rond Ascaris lu
 
 📊 Détails d’entraînement
 
-  Modèle de base : aboonaji/llama2finetune-v2
+Modèle de base : aboonaji/llama2finetune-v2
 
-  Jeu de données : aboonaji/wiki_medical_terms_llam2_format
- 
-  Méthode : LoRA (Low-Rank Adaptation)
+Jeu de données : aboonaji/wiki_medical_terms_llam2_format
 
-  Précision : Quantification 4 bits (NF4)
+Méthode : LoRA (Low-Rank Adaptation)
 
-  Librairies : Transformers, PEFT, TRL
+Précision : Quantification 4 bits (NF4)
 
-  Nombre d’étapes : 100 (version de démonstration)
+Librairies : Transformers, PEFT, TRL
+
+Nombre d’étapes : 100 (version de démonstration)
+
+L’entraînement a été effectué avec le SFTTrainer de trl, permettant un fine-tuning efficace avec une mémoire GPU limitée.
 
 L’entraînement a été effectué avec le SFTTrainer de trl, permettant un fine-tuning efficace avec une mémoire GPU limitée.
 📈 Résultats et observations
